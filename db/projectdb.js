@@ -2,7 +2,7 @@
  require('dotenv').config();
 
  var url = process.env.MONGO_URI;
- var conn = mongoose.connect(process.env.MONGODB_URI || url , { useNewUrlParser: true  , useUnifiedTopology: true} , (err)=>{
+ var conn = mongoose.connect("mongodb+srv://sami:sami1999@cluster0.chic2xy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 " , { useNewUrlParser: true  , useUnifiedTopology: true} , (err)=>{
      if(!err){
          console.log("Moongoose connect succeded...");
      }
