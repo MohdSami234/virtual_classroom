@@ -25,8 +25,7 @@ app.use(express.static("public"));
 
 require('dotenv').config();
 
-const mongoURI = "mongodb+srv://sami:sami1999@cluster0.chic2xy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
+ 
 const conn = mongoose.createConnection(process.env.MONGODB_URI ||mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let gfs;
