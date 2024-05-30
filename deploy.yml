@@ -27,6 +27,9 @@ jobs:
 
 
     - name: Deploy to Render
+      environment: production
+      env: |
+        MONGODB_URI=${{ secrets.MONGODB_URI }}
       run: |
         curl -X POST -H "Content-Type: application/json" \
           -H "Authorization: Bearer ${{ secrets.RENDER_TOKEN }}" \
