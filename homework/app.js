@@ -25,7 +25,9 @@ app.use(express.static("public"));
 
 require('dotenv').config();
 
- 
+const url =  process.env.MONGODB_URI 
+let mongoURI = process.env.MONGODB_URI 
+
 const conn = mongoose.createConnection(process.env.MONGODB_URI ||mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let gfs;
