@@ -31,7 +31,8 @@ app.use(bp.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
 
- 
+const mongoURI = "mongodb+srv://sami:sami1999@cluster0.chic2xy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+console.log(mongoURI);
 const conn = mongoose.createConnection( process.env.MONGODB_URI || mongoURI , { useNewUrlParser: true, useUnifiedTopology: true });
 
 let gfs;
