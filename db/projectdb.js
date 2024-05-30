@@ -2,6 +2,7 @@
  require('dotenv').config();
 
  var url = process.env.MONGODB_URI;
+ console.log(url)
  var conn = mongoose.connect( url , { useNewUrlParser: true  , useUnifiedTopology: true} , (err)=>{
      if(!err){
          console.log("Moongoose connect succeded...");
